@@ -8,3 +8,21 @@
 <div id="resultform">
     <label id="labelresult"></label>
 </div>
+<p>
+    Kertoma lasketetaan javascript-funktiolla, jonka koodi on seuraavia
+<pre>
+function calcFactorial(){
+    let a = parseInt(document.getElementById("num").value);
+    let result = 1;
+    if(a < 0){
+        document.getElementById("labelresult").innerHTML = "Luvun tulee olla positiivinen kokonaisluku";
+    }
+    else{
+        for(let i = 1; i <= a; i++){
+            result *= i;
+        }
+        document.getElementById("labelresult").innerHTML = "Luvun " + a + " kertoma = " + result;
+    }
+}
+</pre>    
+</p>

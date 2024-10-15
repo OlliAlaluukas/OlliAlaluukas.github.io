@@ -1,0 +1,28 @@
+<h2>Käyttäjät</h2>
+<p>Tässä on kuvitteellisia käyttäjiä, jotka haetaan javascript-oliosta nimeltä user.</p>
+<p>
+    <button id="showUsersButton" onclick="showUsers()">Näytä</button>
+</p>
+<p>Tässä on kuvitteellisia käyttäjiä, jotka haetaan sivulta <a href="https://jsonplaceholder.typicode.com/users" target="_blank">https://jsonplaceholder.typicode.com/users</a> </p>
+<button id="getUsersButton" onclick="getUsers()">Näytä</button>
+<div id = "allUsers"></div>
+<button id="hideButton" onclick="hideElement()">Sulje</button>
+<h3>Käyttäjän lisääminen</h3>
+<div id="myform">
+    <label for="n">Nimi</label>
+    <br>
+    <input id="n" type="text" placeholder="Etunimi Sukunimi">
+    <br>
+    <label for="e">Email</label>
+    <br>
+    <input id="e" type="text" placeholder="Tunnus@osoite.fi">
+    <br>
+    <label for="l">Valitse kieli</label>
+    <br>
+    <select name="" id="l">
+        <option value="Suomi">Suomi</option>
+        <option value="Ruotsi">Ruotsi</option>
+    </select>
+    <br>
+    <button onclick="saveUser()">Tallenna</button>
+</div>
