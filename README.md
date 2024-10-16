@@ -1,4 +1,4 @@
-<h2>HTML (25%)</h2>
+<h2>HTML (25%)  5/5</h2>
 <ul>
     <li>
         1/5:<br>      
@@ -27,7 +27,7 @@
         Sivustolla on osiot header, menu, content ja footer.
     </li>
 </ul>
-    <h2>CSS (25%)</h2>
+    <h2>CSS (25%)  5/5</h2>
     <ul>
         <li>
             1/5:<br>
@@ -55,7 +55,7 @@
             Mielestäni näin on.
         </li>
     </ul>
-    <h2>JavaScript Basics (25%)</h2>
+    <h2>JavaScript Basics (25%)  5/5</h2>
     <ul>
         <li>
             1/5:<br>
@@ -83,7 +83,7 @@
             Esim. Person-luokkaa käytetään käyttäjän tallentamiseen Käyttäjä sivulla.
         </li>
     </ul>
-    <h2>Asynchronous Operations (25%)</h2>
+    <h2>Asynchronous Operations (25%)  5/5</h2>
     <ul>
         <li>
             1/5:<br>
