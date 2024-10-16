@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web-sovellusten perusteet</title>
     <link rel="stylesheet" href="./css/mystyle.css">
+    <link rel="stylesheet" href="./css/flex.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     <script src="./js/myfunctions.js"></script>
     <script src="./js/user.js"></script>
     <script src="./js/person.js"></script>
@@ -12,9 +14,9 @@
 </head>
 <body>
     <div id="header">
-        <h1>Laskutoimituksia</h1>
+        <h1>Webbiprojekti</h1>
     </div>
-    <div id="menu">
+    <div id="menu" class="row">
         <ul>
             <li><button onclick="getPage('alku.html')">Pääsivu</button></li>
         </ul>
@@ -29,9 +31,10 @@
         <hr>
         <ul>
             <li><button onclick="getPage('users.html')">Käyttäjät</button></li>
+            <li><button onclick="getPage('flex.html')">Flex</button></li>
         </ul>
     </div>
-    <div id="content">
+    <div id="content" class="col-6 col-s-9">
         
     </div>
     <div id="footer">

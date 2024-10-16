@@ -1,0 +1,42 @@
+.box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  * {
+   box-sizing: border-box;
+  }
+  .flexForm {
+    display: flex;
+    background-color: rgb(97, 120, 168);
+    border-radius: 10px;
+    padding: 1.8em;
+    margin-top: 10px;
+  }
+  .message {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+  .message > textarea {
+   flex: 1;
+   min-width: 18em;
+  }
+  .contact {
+    flex: 1;
+    order: 1;
+    margin-right: 2em;
+  }
+  .contact input {
+    width: 100%;
+  }
+  .contact input,
+  .contact button {
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+  .contact button {
+   background: gray;
+   color: white;
+   border: 0;
+  }

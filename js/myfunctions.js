@@ -68,24 +68,59 @@ function calcFactorial(){
         document.getElementById("labelresult").innerHTML = "Luvun " + a + " kertoma = " + result;
     }
 }
-function getUsers(){
+function getUsers(order = null){
     let xmlUsers = new XMLHttpRequest();
     xmlUsers.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             let users = JSON.parse(this.response);
-            let row = "<table border = '1'>";
-            row +="<tr><th>nimi</th><th>email</th></tr>";
-            users.map(user => {
-                row += "<tr key="+user.id+"><td>" + user.name +"</td><td> "+ user.email+"</td></tr>"
-            });
-            row += "</table>";
-            document.getElementById("allUsers").innerHTML = row;
+            if(order == 'asc'){
+                //järjestetään name-kentän mukaan kasvavaan aakkosjärjestykseen
+                    users.sort(function (a, b) {
+            
+                    if (a.name > b.name) {
+                        return 1;
+                    }
+                    else if (a.name < b.name) {
+                        return -1;
+                    }
+                    return 0;
+                });
+            }
+            else if(order == 'desc'){
+                //järjestetään name-kentän mukaan laskevaan aakkosjärjestykseen
+                    users.sort(function (a, b) {
+                
+                        if (a.name > b.name) {
+                            return -1;
+                        }
+                        else if (a.name < b.name) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+            }
+            if(this.response){
+                let row = "<table border = '1'>";
+                row +="<tr><th>nimi</th><th>email</th></tr>";
+                users.map(user => {
+                    row += "<tr key="+user.id+"><td>" + user.name +"</td><td> "+ user.email+"</td></tr>"
+                });
+                row += "</table>";
+                document.getElementById("allUsers").innerHTML = row;
+            }
+            else{
+                alert("Dataa ei voitu hakea");
+            }
+
         }
         else {
             console.log("Can not get data");
+            
+
         }
     }
     let url = "https://jsonplaceholder.typicode.com/users";
+    
     xmlUsers.open("GET", url);
 
     xmlUsers.send();
@@ -126,4 +161,15 @@ function saveUser(){
     const person = new Person(n,e,l);
     console.log(person);
     alert("Lisättiin olio person, jonka data on \n"+person.getPerson());
+}
+function myTimer(){
+    alert("Timer toimii");
+}
+function demo(){
+    let a = document.getElementById('name').value;
+    let b = document.getElementById('townborn').value;
+    let c = document.getElementById('email').value;
+    document.getElementById('testName').innerHTML=a;
+    document.getElementById('testTown').innerHTML=b;
+    document.getElementById('testEmail').innerHTML=c;
 }
